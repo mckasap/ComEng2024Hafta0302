@@ -3,6 +3,7 @@ package com.example.comeng2024hafta0302;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -28,6 +29,15 @@ public class MainActivity extends ListActivity {
         Toast.makeText( this
                 ,(String) l.getItemAtPosition(position),
                 Toast.LENGTH_LONG).show();
+
+    }
+
+    public void webStart(View v){
+        Intent myInt = new Intent(MainActivity.this,
+                MainActivity2.class);
+
+        startActivity(myInt);
+
 
     }
 }
